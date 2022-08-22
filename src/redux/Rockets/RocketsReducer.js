@@ -1,7 +1,15 @@
+// URL
+// const urlAPI = 'https://api.spacexdata.com/v3/rockets'
+
 // actions
 const TOGGLE_RESERVE_ROCKET = 'space-traveler/rockets/TOGGLE_RESERVE_ROCKET';
 const GET_ROCKETS = 'space-traveler/rockets/GET_ROCKETS';
-const initialState = [];
+const initialState = [{
+    id: '1',
+    name: 'falcon9',
+    description: 'blablabla',
+    reserved: false,
+}];
 
 // reducer
 const rocketsReducer = (state = initialState, action) => {
@@ -24,3 +32,10 @@ const toggleReservationRocket = (id) => ({
 });
 
 export { toggleReservationRocket };
+
+const getRockets = () => ({
+    type: GET_ROCKETS,
+    payload: initialState,
+})
+
+export { getRockets };
