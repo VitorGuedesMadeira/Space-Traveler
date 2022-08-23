@@ -1,0 +1,83 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.mission-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHead {
+  display: grid;
+  grid-template-columns: repeat(4, 20% 40% 10% 10%);
+  align-items: center;
+  grid-gap: 10px;
+  border: solid 1px #000;
+}
+
+.tableBody {
+  display: grid;
+  grid-template-columns: repeat(4, 20% 40% 20% 20%);
+  align-items: center;
+  gap: 20px;
+  border: solid 1px #000;
+}
+
+.missionTitle {
+  width: 30%;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+  padding: 10px;
+  margin: 10px;
+}
+
+.mission-description {
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.notMember {
+  justify-content: center;
+  margin: 10px;
+  background-color: #808080;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.member {
+  justify-content: center;
+  margin: 10px;
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.leave {
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  color: #f00;
+  border: solid 1px #f00;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.join {
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+  border-radius: 5px;
+  font-size: 20px;
+}

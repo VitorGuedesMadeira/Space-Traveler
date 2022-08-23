@@ -20,7 +20,7 @@ const Navbar = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink className={({ isActive }) => (isActive ? 'myprofile-link active-link' : 'none')} to="MyProfile">
+        <NavLink className={({ isActive }) => (isActive ? 'myprofile-link active-link' : 'none myprofile-none')} to="MyProfile">
           My Profile
         </NavLink>
       </li>

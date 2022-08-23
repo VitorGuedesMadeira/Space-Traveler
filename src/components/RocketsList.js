@@ -1,24 +1,30 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+/* eslint-disable max-len */
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
+import RocketImage from '../images/rocketpng.png';
+import { getRockets } from '../redux/Rockets/RocketsReducer';
 
 const RocketsList = () => {
+  const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
+  useEffect(() => {
+    if (!rockets.length) {
+      dispatch(getRockets());
+    }
+  });
 
-  <div className="rockets-list">
-    <ul>
+  return (
+    <ul className="rockets-list">
       {rockets.map((rocket) => (
-        <Rocket
-        key={rocket.id}
-        name={rocket.name}
-        description={rocket.description}
-        img={rocket.img}
-        reserved={rocket.reserved}
-        id={rocket.id}
-      />
+        <li key={rocket.id} className="test">
+          <Rocket rocket={rocket} />
+        </li>
       ))}
+      <img className="background-rocket" src={RocketImage} alt="rocket" />
     </ul>
-  </div>
+  );
 };
 
 export default RocketsList;
+

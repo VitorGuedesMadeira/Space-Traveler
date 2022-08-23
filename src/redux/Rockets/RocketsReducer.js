@@ -1,41 +1,36 @@
-// URL
-// const urlAPI = 'https://api.spacexdata.com/v3/rockets'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-// actions
-const TOGGLE_RESERVE_ROCKET = 'space-traveler/rockets/TOGGLE_RESERVE_ROCKET';
-const GET_ROCKETS = 'space-traveler/rockets/GET_ROCKETS';
-const initialState = [{
-    id: '1',
-    name: 'falcon9',
-    description: 'blablabla',
-    reserved: false,
-}];
+// First, create the thunk
+export const getRockets = createAsyncThunk(
+  'rockets/getRockets',
+  async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/rockets');
+    return response.json();
+  },
+);
 
-// reducer
-const rocketsReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case TOGGLE_RESERVE_ROCKET:
-      return 'test1';
-    case GET_ROCKETS:
-      return 'test2';
-    default:
-      return state;
-  }
-};
+const initialState = [];
 
-export default rocketsReducer;
-
-// action creators
-const toggleReservationRocket = (id) => ({
-  type: TOGGLE_RESERVE_ROCKET,
-  payload: id,
+// Then, handle actions in your reducers:
+const rocketsSlice = createSlice({
+  name: 'rockets',
+  initialState,
+  reducers: {
+    rocketsReducer: (state, action) => state.map((rocket) => {
+      if (rocket.id !== action.payload.rocket.id) {
+        return rocket;
+      }
+      return { ...rocket, reserved: !rocket.reserved };
+    }),
+    // standard reducer logic, with auto-generated action types per reducer
+  },
+  extraReducers: (builder) => {
+    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(getRockets.fulfilled, (state, action) => action.payload);
+  },
 });
 
-export { toggleReservationRocket };
+// Action creators are generated for each case reducer function
+export const { rocketsReducer } = rocketsSlice.actions;
 
-const getRockets = () => ({
-    type: GET_ROCKETS,
-    payload: initialState,
-})
-
-export { getRockets };
+export default rocketsSlice.reducer;
