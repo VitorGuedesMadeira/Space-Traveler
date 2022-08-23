@@ -1,18 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Rockets from './pages/Rockets';
-import Missions from './pages/Missions';
-import MyProfile from './pages/MyProfile';
+import RocketsPage from './pages/RocketsPage';
+import MissionsPage from './pages/MissionsPage';
+import MyProfilePage from './pages/MyProfilePage';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="Missions" element={<Missions />} />
-        <Route path="MyProfile" element={<MyProfile />} />
+        <Route path="/" element={<RocketsPage />} />
+        <Route path="Missions" element={<MissionsPage />} />
+        <Route path="MyProfile" element={<MyProfilePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

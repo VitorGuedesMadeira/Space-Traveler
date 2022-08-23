@@ -1,15 +1,19 @@
 // actions
 const TOGGLE_RESERVE_ROCKET = 'space-traveler/rockets/TOGGLE_RESERVE_ROCKET';
 const GET_ROCKETS = 'space-traveler/rockets/GET_ROCKETS';
-const initialState = [];
 
 // reducer
-const rocketsReducer = (state = initialState, action) => {
+const rocketsReducer = (state = [], action) => {
   switch (action.type) {
     case TOGGLE_RESERVE_ROCKET:
-      return 'test1';
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: !rocket.reserved };
+      });
     case GET_ROCKETS:
-      return 'test2';
+      return action.payload;
     default:
       return state;
   }
@@ -24,3 +28,13 @@ const toggleReservationRocket = (id) => ({
 });
 
 export { toggleReservationRocket };
+
+const getRockets = () => async (dispatch) => {
+  const response = await fetch('https://api.spacexdata.com/v3/rockets').then((data) => data.json());
+  dispatch({
+    type: GET_ROCKETS,
+    payload: response,
+  });
+};
+
+export { getRockets };

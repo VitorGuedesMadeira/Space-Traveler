@@ -1,8 +1,8 @@
 import React from 'react';
 import RocketsList from '../components/RocketsList';
 
-const Rockets = () => (
+const RocketsPage = () => (
   <RocketsList />
 );
 
-export default Rockets;
+export default RocketsPage;
