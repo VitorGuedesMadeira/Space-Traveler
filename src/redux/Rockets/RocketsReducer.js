@@ -1,40 +1,36 @@
-// actions
-const TOGGLE_RESERVE_ROCKET = 'space-traveler/rockets/TOGGLE_RESERVE_ROCKET';
-const GET_ROCKETS = 'space-traveler/rockets/GET_ROCKETS';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-// reducer
-const rocketsReducer = (state = [], action) => {
-  switch (action.type) {
-    case TOGGLE_RESERVE_ROCKET:
-      return state.map((rocket) => {
-        if (rocket.id !== action.payload) {
-          return rocket;
-        }
-        return { ...rocket, reserved: !rocket.reserved };
-      });
-    case GET_ROCKETS:
-      return action.payload;
-    default:
-      return state;
-  }
-};
+// First, create the thunk
+export const getRockets = createAsyncThunk(
+  'rockets/getRockets',
+  async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/rockets');
+    return response.json();
+  },
+);
 
-export default rocketsReducer;
+const initialState = [];
 
-// action creators
-const toggleReservationRocket = (id) => ({
-  type: TOGGLE_RESERVE_ROCKET,
-  payload: id,
+// Then, handle actions in your reducers:
+const rocketsSlice = createSlice({
+  name: 'rockets',
+  initialState,
+  reducers: {
+    rocketsReducer: (state, action) => state.map((rocket) => {
+      if (rocket.id !== action.payload.rocket.id) {
+        return rocket;
+      }
+      return { ...rocket, reserved: !rocket.reserved };
+    }),
+    // standard reducer logic, with auto-generated action types per reducer
+  },
+  extraReducers: (builder) => {
+    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(getRockets.fulfilled, (state, action) => action.payload);
+  },
 });
 
-export { toggleReservationRocket };
+// Action creators are generated for each case reducer function
+export const { rocketsReducer } = rocketsSlice.actions;
 
-const getRockets = () => async (dispatch) => {
-  const response = await fetch('https://api.spacexdata.com/v3/rockets').then((data) => data.json());
-  dispatch({
-    type: GET_ROCKETS,
-    payload: response,
-  });
-};
-
-export { getRockets };
+export default rocketsSlice.reducer;

@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import rocketsReducer from './Rockets/RocketsReducer';
+import rocketsSlice from './Rockets/RocketsReducer';
 
 const store = configureStore({
   reducer: {
-    rockets: rocketsReducer,
+    rockets: rocketsSlice,
     categories: 'katana',
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),

@@ -177,7 +177,7 @@ body {
   color: white;
 }
 
-.rocket-button {
+.notActiveButton {
   padding: 10px;
   width: 150px;
   border: none;
@@ -185,9 +185,22 @@ body {
     0 0 5px white,
     0 0 22px white;
   transition-duration: 0.5s;
+  background-color: white;
 }
 
-.rocket-button:hover {
+.activeButton {
+  background-color: yellow;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  box-shadow:
+    0 0 5px yellow,
+    0 0 22px yellow;
+  transition-duration: 0.5s;
+}
+
+.activeButton:hover,
+.notActiveButton:hover {
   color: black;
   background-color: yellow;
   box-shadow:
