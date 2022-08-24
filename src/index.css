@@ -175,6 +175,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  min-height: calc(100vh - 34px)
 }
 
 .notActiveButton {
