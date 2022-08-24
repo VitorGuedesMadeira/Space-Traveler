@@ -1,27 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`F component Renders Navbar component 1`] = `
+exports[`MyProfile component Renders MyProfile component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <footer
-        class="footer-section"
+      <div
+        class="my-profile-section"
       >
-        <small>
-          © Copyright 2022, Microverse
-        </small>
-      </footer>
+        <div
+          class="rockets-profile"
+        >
+          <h2>
+            Rockets
+          </h2>
+          <ul>
+            <li
+              class="no-rocket-reservations"
+            >
+              No Reservations
+            </li>
+          </ul>
+        </div>
+        <div
+          class="missions-profile"
+        >
+          <h2>
+            Missions
+          </h2>
+          <ul>
+            <li
+              class="no-mission-reservations"
+            >
+              No Missions
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <footer
-      class="footer-section"
+    <div
+      class="my-profile-section"
     >
-      <small>
-        © Copyright 2022, Microverse
-      </small>
-    </footer>
+      <div
+        class="rockets-profile"
+      >
+        <h2>
+          Rockets
+        </h2>
+        <ul>
+          <li
+            class="no-rocket-reservations"
+          >
+            No Reservations
+          </li>
+        </ul>
+      </div>
+      <div
+        class="missions-profile"
+      >
+        <h2>
+          Missions
+        </h2>
+        <ul>
+          <li
+            class="no-mission-reservations"
+          >
+            No Missions
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -77,28 +127,78 @@ Object {
 }
 `;
 
-exports[`Navbar component Renders Navbar component 1`] = `
+exports[`Rocket component Renders Rocket component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <footer
-        class="footer-section"
+      <div
+        class="my-profile-section"
       >
-        <small>
-          © Copyright 2022, Microverse
-        </small>
-      </footer>
+        <div
+          class="rockets-profile"
+        >
+          <h2>
+            Rockets
+          </h2>
+          <ul>
+            <li
+              class="no-rocket-reservations"
+            >
+              No Reservations
+            </li>
+          </ul>
+        </div>
+        <div
+          class="missions-profile"
+        >
+          <h2>
+            Missions
+          </h2>
+          <ul>
+            <li
+              class="no-mission-reservations"
+            >
+              No Missions
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <footer
-      class="footer-section"
+    <div
+      class="my-profile-section"
     >
-      <small>
-        © Copyright 2022, Microverse
-      </small>
-    </footer>
+      <div
+        class="rockets-profile"
+      >
+        <h2>
+          Rockets
+        </h2>
+        <ul>
+          <li
+            class="no-rocket-reservations"
+          >
+            No Reservations
+          </li>
+        </ul>
+      </div>
+      <div
+        class="missions-profile"
+      >
+        <h2>
+          Missions
+        </h2>
+        <ul>
+          <li
+            class="no-mission-reservations"
+          >
+            No Missions
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

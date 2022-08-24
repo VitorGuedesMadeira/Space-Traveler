@@ -3,15 +3,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
 import store from '../../redux/configureStore';
-import Footer from '../Footer';
+import Rocket from '../MyProfile';
 
-describe('Footer component', () => {
-  test('Renders Footer component', () => {
+describe('Rocket component', () => {
+  test('Renders Rocket component', () => {
     const tree = render(
       <React.StrictMode>
         <Provider store={store}>
           <Router>
-            <Footer />
+            <Rocket />
           </Router>
         </Provider>
       </React.StrictMode>,

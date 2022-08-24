@@ -1,27 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`F component Renders Navbar component 1`] = `
+exports[`RocketsList component Renders RocketsList component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <footer
-        class="footer-section"
+      <ul
+        class="rockets-list"
       >
-        <small>
-          © Copyright 2022, Microverse
-        </small>
-      </footer>
+        <img
+          alt="rocket"
+          class="background-rocket"
+          src="rocketpng.png"
+        />
+      </ul>
     </div>
   </body>,
   "container": <div>
-    <footer
-      class="footer-section"
+    <ul
+      class="rockets-list"
     >
-      <small>
-        © Copyright 2022, Microverse
-      </small>
-    </footer>
+      <img
+        alt="rocket"
+        class="background-rocket"
+        src="rocketpng.png"
+      />
+    </ul>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -77,28 +81,32 @@ Object {
 }
 `;
 
-exports[`Navbar component Renders Navbar component 1`] = `
+exports[`footer component Renders Footer component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <footer
-        class="footer-section"
+      <ul
+        class="rockets-list"
       >
-        <small>
-          © Copyright 2022, Microverse
-        </small>
-      </footer>
+        <img
+          alt="rocket"
+          class="background-rocket"
+          src="rocketpng.png"
+        />
+      </ul>
     </div>
   </body>,
   "container": <div>
-    <footer
-      class="footer-section"
+    <ul
+      class="rockets-list"
     >
-      <small>
-        © Copyright 2022, Microverse
-      </small>
-    </footer>
+      <img
+        alt="rocket"
+        class="background-rocket"
+        src="rocketpng.png"
+      />
+    </ul>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
