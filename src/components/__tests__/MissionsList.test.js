@@ -1,17 +1,17 @@
 import { render } from '@testing-library/react';
-import Footer from '../Footer'
+import MissionsList from '../MyProfile';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../redux/configureStore';
 import React from 'react';
 
-describe('Footer component', () => {
-  test('Renders Footer component', () => {
+describe('MyProfile component', () => {
+  test('Renders MyProfile component', () => {
     const tree = render(
     <React.StrictMode>
       <Provider store={store}>
         <Router>
-          <Footer />
+          <MissionsList />
         </Router>
       </Provider>
     </React.StrictMode>,)
