@@ -217,6 +217,7 @@ body {
     0 0 12px rgb(84, 136, 255),
     0 0 40px rgb(84, 136, 255),
     0 0 65px rgb(84, 136, 255);
+  animation: animationTitles 2s;
 }
 
 .rockets-profile ul {
@@ -281,6 +282,7 @@ body {
     0 0 12px rgb(84, 136, 255),
     0 0 40px rgb(84, 136, 255),
     0 0 65px rgb(84, 136, 255);
+  animation: animationTitles 2s;
 }
 
 .missions-profile p {

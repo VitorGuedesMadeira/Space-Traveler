@@ -42,7 +42,7 @@
     0 0 15px white,
     0 0 36px white;
   font-weight: bold;
-  animation: animation 2s;
+  animation: animationTitles 2s;
 }
 
 .mission-title {
@@ -59,7 +59,7 @@
 }
 
 .descriptions {
-  animation: animation 2s;
+  animation: animationTitles 2s;
   color: white;
   text-shadow:
     0 0 5px white,
@@ -79,7 +79,7 @@
     0 0 5px white,
     0 0 15px white,
     0 0 36px white;
-  animation: status 2s;
+  animation: animationTitles 2s;
 }
 
 .mission-status {
@@ -143,6 +143,16 @@
     0 0 5px white,
     0 0 15px white,
     0 0 36px white;
+}
+
+@keyframes animationTitles {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes status {
