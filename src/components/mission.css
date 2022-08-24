@@ -1,83 +1,158 @@
-body {
-  background-color: #f5f5f5;
-}
-
-.mission-container {
+.missions-container {
   display: flex;
   flex-direction: column;
-}
-
-.tableHead {
-  display: grid;
-  grid-template-columns: repeat(4, 20% 40% 10% 10%);
   align-items: center;
-  grid-gap: 10px;
-  border: solid 1px #000;
+  padding: 150px;
+  gap: 25px;
+  background-image: url(../images/square2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.tableBody {
-  display: grid;
-  grid-template-columns: repeat(4, 20% 40% 20% 20%);
-  align-items: center;
-  gap: 20px;
-  border: solid 1px #000;
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.missionTitle {
-  width: 30%;
+.table-head {
+  max-width: 1000px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.table-body {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 50px;
+  background-image: linear-gradient(to right, transparent, rgba(230, 230, 175, 0.1), rgb(0, 0, 0, 0.5), transparent);
+  padding: 25px 0;
+  border-bottom: 20px solid rgb(0, 0, 0, 0.1);
+}
+
+.titles {
+  color: white;
+  text-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 36px white;
   font-weight: bold;
-  color: #000;
-  padding: 10px;
-  margin: 10px;
+  animation: animation 2s;
+}
+
+.mission-title {
+  text-align: center;
+  width: 200px;
+  color: rgb(162, 190, 255);
+  text-shadow:
+    0 0 3px rgb(84, 136, 255),
+    0 0 12px rgb(84, 136, 255),
+    0 0 40px rgb(84, 136, 255),
+    0 0 65px rgb(84, 136, 255);
+  font-weight: bold;
+  animation: animation 2s;
+}
+
+.descriptions {
+  animation: animation 2s;
+  color: white;
+  text-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 36px white;
 }
 
 .mission-description {
-  justify-content: center;
-  padding: 10px;
-  margin: 10px;
+  width: 500px;
+  text-align: center;
+  animation: animation 2s;
+}
+
+.status {
+  color: white;
+  text-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 36px white;
+  animation: status 2s;
+}
+
+.mission-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  animation: status 2s;
 }
 
 .notMember {
   justify-content: center;
-  margin: 10px;
-  background-color: #808080;
+  background-color: transparent;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 5px;
+  width: 140px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .member {
   justify-content: center;
-  margin: 10px;
-  background-color: #00f;
+  background-color: rgb(136, 172, 255);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  width: 140px;
+  box-shadow:
+    0 0 3px rgb(48, 110, 255),
+    0 0 12px rgb(48, 110, 255),
+    0 0 40px rgb(48, 110, 255);
 }
 
-.leave {
-  justify-content: center;
-  padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  color: #f00;
-  border: solid 1px #f00;
+.leave-btn {
+  width: 140px;
+  padding: 5px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  background-color: red;
+  border: none;
+  color: white;
+  box-shadow:
+    0 0 5px red,
+    0 0 15px red,
+    0 0 36px red;
 }
 
-.join {
-  justify-content: center;
-  padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  color: #000;
-  border: solid 1px #000;
+.join-btn {
+  padding: 5px;
+  width: 140px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  border: none;
+  background-color: white;
+  color: black;
+  box-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 36px white;
+}
+
+@keyframes status {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
