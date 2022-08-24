@@ -27,4 +27,3 @@ const RocketsList = () => {
 };
 
 export default RocketsList;
-

@@ -26,13 +26,14 @@ const MyProfile = () => {
         </div>
         <div className="missions-profile">
           <h2>Missions</h2>
-          <div>
-            {missionList.map((item) => (
-              <div key={item.id} className="mission-profile">
-                <p>{item.name}</p>
-              </div>
-            ))}
-          </div>
+          <ul>
+            {missionList.length === 0 ? <li className="no-mission-reservations">No Missions</li>
+              : missionList.map((mission) => (
+                <li key={mission.id} className="mission-profile">
+                  {mission.name}
+                </li>
+              ))}
+          </ul>
         </div>
       </div>
     </>

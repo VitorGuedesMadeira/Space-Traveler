@@ -104,6 +104,7 @@ body {
   position: absolute;
   height: 1200px;
   right: 0;
+  animation: rocket 2s;
 }
 
 .rockets-list {
@@ -167,13 +168,12 @@ body {
 .my-profile-section {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 50px;
   width: 100%;
+  padding: 150px 0;
   background-image: url(images/square.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   color: white;
 }
 
@@ -210,23 +210,76 @@ body {
 
 .rockets-profile h2 {
   text-align: center;
+  color: rgb(162, 190, 255);
   text-shadow:
-    0 0 3px white,
-    0 0 12px white,
-    0 0 40px white;
+    0 0 3px rgb(84, 136, 255),
+    0 0 12px rgb(84, 136, 255),
+    0 0 40px rgb(84, 136, 255),
+    0 0 65px rgb(84, 136, 255);
+}
+
+.rockets-profile ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: linear-gradient(to right, transparent, rgb(84, 136, 255, 0.1), transparent);
+  padding: 60px;
+  animation: rockets 2s;
+}
+
+.missions-profile ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: linear-gradient(to right, transparent, rgb(84, 136, 255, 0.1), transparent);
+  padding: 60px;
+  animation: missions 2s;
 }
 
 .rockets-profile li {
-  padding: 25px;
-  border: 1px solid white;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 60px;
+  border-bottom: 15px solid rgb(0, 0, 0, 0.3);
+  background-image: linear-gradient(to right, rgb(84, 136, 255, 0.1), rgb(0, 0, 0, 0.7), transparent);
+  text-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 26px rgb(84, 136, 255);
+  cursor: pointer;
+}
+
+.missions-profile li {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 40px;
+  border-bottom: 15px solid rgb(0, 0, 0, 0.3);
+  background-image: linear-gradient(to right, transparent, rgb(0, 0, 0, 0.7), rgb(84, 136, 255, 0.1));
+  text-shadow:
+    0 0 5px white,
+    0 0 15px white,
+    0 0 26px rgb(84, 136, 255);
+  cursor: pointer;
+}
+
+.rockets-profile li:hover {
+  background-image: linear-gradient(to right, rgb(84, 136, 255, 0.3), rgba(6, 4, 33, 0.7), transparent);
+}
+
+.missions-profile li:hover {
+  background-image: linear-gradient(to right, transparent, rgba(6, 4, 33, 0.7), rgb(84, 136, 255, 0.3));
 }
 
 .missions-profile h2 {
   text-align: center;
+  color: rgb(162, 190, 255);
   text-shadow:
-    0 0 3px white,
-    0 0 12px white,
-    0 0 40px white;
+    0 0 3px rgb(84, 136, 255),
+    0 0 12px rgb(84, 136, 255),
+    0 0 40px rgb(84, 136, 255),
+    0 0 65px rgb(84, 136, 255);
 }
 
 .missions-profile p {
@@ -251,6 +304,42 @@ body {
   from {
     opacity: 0;
     transform: translate3d(-60px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rocket {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rockets {
+  from {
+    opacity: 0;
+    transform: translate3d(-60px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes missions {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
   }
 
   to {
