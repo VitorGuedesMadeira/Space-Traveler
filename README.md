@@ -5,7 +5,7 @@
 - Microverse - React/Redux group project
 
 ## Acces link
-> [click here to check live version](https://spacetraveler-guedeskatana.netlify.app/MyProfile)
+> [click here to check live version](https://spacetraveler-guedeskatana.netlify.app/)
 
 ## Tech ⌘⇧
 - **HTML & CSS best practices:** Correct use of tags, elements, properties and syntax.
